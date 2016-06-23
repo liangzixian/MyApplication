@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+    <Node
+        Expires="30000000"
+        Key="getExpressType"
+        NetType="get"
+        Url="http://v.juhe.cn/exp/com"/>
+    <Node
+        Expires="0"
+        Key="getDetailsInfo"
+        NetType="get"
+        Url="http://v.juhe.cn/exp/index"/>
+
+
+
+    <Node
+        Expires="3000000000"
+        Key="getCategory"
+        NetType="get"
+        Url="http://apis.juhe.cn/cook/category"/>
+
+    <Node
+        Expires="3000000000"
+        Key="getByCid"
+        NetType="get"
+        Url="http://apis.juhe.cn/cook/index"/>
+
+    <Node
+        Expires="3000000000"
+        Key="QueryId"
+        NetType="get"
+        Url="http://apis.juhe.cn/cook/queryid"/>
+
+
+</url>
