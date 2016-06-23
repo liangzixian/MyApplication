@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MillionMenus</string>
+
+    <string name="str_loadig">正在加载...</string>
+
+    <string name="str_classify">菜单分类</string>
+
+    <string name="str_list">菜单列表</string>
+
+    <string name="str_details">详情</string>
+</resources>
