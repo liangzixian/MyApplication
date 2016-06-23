@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Menus</string>
+    <string name="tab_str_menu">菜谱</string>
+    <string name="tab_str_find">发现</string>
+    <string name="tab_str_classify">分类</string>
+    <string name="tab_str_my">我的</string>
 </resources>
