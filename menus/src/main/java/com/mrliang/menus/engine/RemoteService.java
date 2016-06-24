@@ -1,4 +1,4 @@
-package com.mrliang.millionmenus.engine;
+package com.mrliang.menus.engine;
 
 import com.mrliang.androidlib.activity.BaseActivity;
 import com.mrliang.androidlib.activity.BaseFragment;

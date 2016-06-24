@@ -17,6 +17,10 @@ public class RequestManager {
         requestList = new ArrayList<HttpRequest>();
     }
 
+    public RequestManager(){
+        requestList = new ArrayList<HttpRequest>();
+    }
+
     /**
      * 添加Request到列表
      */

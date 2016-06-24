@@ -75,6 +75,7 @@ public class ChangeColorIconWithText extends View {
         //描绘文字
         mTextBound = new Rect();
         mTextPaint = new Paint();
+        mTextPaint.setAntiAlias(true);
         mTextPaint.setTextSize(mTextSize);
         mTextPaint.setColor(0Xff555555);
         mTextPaint.getTextBounds(mText, 0, mText.length(), mTextBound);
