@@ -17,7 +17,8 @@ import com.mrliang.menus.view.ChangeColorIconWithText;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener, ViewPager
+        .OnPageChangeListener {
 
     private ViewPager mViewpager;
     private List<Fragment> mTabs = new ArrayList<Fragment>();
@@ -25,6 +26,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private FragmentPagerAdapter mAdapter;
 
     private List<ChangeColorIconWithText> mTabIndicators = new ArrayList<ChangeColorIconWithText>();
+
+    private List<Integer> mTitle = new ArrayList<>();
+
 
     MenuFragment menuFragment = null;
     FindFragment findFragment = null;
@@ -35,6 +39,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         initView();
 
         initData();
@@ -45,6 +50,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void initData() {
+        mTitle.add(R.string.tab_str_menu);
+        mTitle.add(R.string.tab_str_find);
+        mTitle.add(R.string.tab_str_classify);
+        mTitle.add(R.string.tab_str_my);
         menuFragment = new MenuFragment();
         mTabs.add(menuFragment);
         findFragment = new FindFragment();
@@ -57,6 +66,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
+                setTitle(mTitle.get(position));
                 return mTabs.get(position);
             }
 
@@ -77,7 +87,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mTabIndicators.add(menu);
         ChangeColorIconWithText find = (ChangeColorIconWithText) findViewById(R.id.id_tab_find);
         mTabIndicators.add(find);
-        ChangeColorIconWithText classify = (ChangeColorIconWithText) findViewById(R.id.id_tab_classify);
+        ChangeColorIconWithText classify = (ChangeColorIconWithText) findViewById(R.id
+                .id_tab_classify);
         mTabIndicators.add(classify);
         ChangeColorIconWithText my = (ChangeColorIconWithText) findViewById(R.id.id_tab_my);
         mTabIndicators.add(my);

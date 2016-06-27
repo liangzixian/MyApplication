@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="tab_str_size_12">12dp</dimen>
+    <dimen name="str_gridview_size">14sp</dimen>
+
 </resources>

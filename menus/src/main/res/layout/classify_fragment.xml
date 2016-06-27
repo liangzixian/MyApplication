@@ -2,16 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/id_tv_classify"
-        android:textStyle="bold"
-        android:textSize="@dimen/activity_vertical_margin"
-        android:text="@string/tab_str_classify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <ScrollView
+            android:id="@+id/id_classify_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:fadingEdge="none"
+            android:fillViewport="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/id_classify_scrollview_tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"></LinearLayout>
+
+        </ScrollView>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_classify_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"></android.support.v4.view.ViewPager>
+
+    </LinearLayout>
 
 </LinearLayout>
