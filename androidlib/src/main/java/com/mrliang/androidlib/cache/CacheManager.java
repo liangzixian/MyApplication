@@ -12,7 +12,7 @@ import java.io.File;
 public class CacheManager {
 
     public static final String APP_CACHE_PATH = Environment.getExternalStorageDirectory().getPath()
-            + "/MillionMenus/appdata/";
+            + "/Menus/appdata/";
 
     /**
      * sdcard 最小空间，如果小于10M，不会再向sdcard里面写入任何数据

@@ -30,9 +30,9 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void initVariables();
 
-    protected abstract void loadData();
-
     protected abstract View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
+
+    protected abstract void loadData();
 
 
     @Override
