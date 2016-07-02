@@ -5,4 +5,8 @@
     <dimen name="tab_str_size_12">12dp</dimen>
     <dimen name="str_gridview_size">14sp</dimen>
 
+    <dimen name="str_size_16">16sp</dimen>
+    <dimen name="str_size_12">12sp</dimen>
+    <dimen name="str_size_14">14sp</dimen>
+    <dimen name="str_size_18">18sp</dimen>
 </resources>

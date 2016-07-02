@@ -2,6 +2,7 @@ package com.mrliang.menus.engine;
 
 import android.app.Application;
 
+import com.avos.avoscloud.AVOSCloud;
 import com.mrliang.androidlib.cache.CacheManager;
 
 /**
@@ -14,6 +15,8 @@ public class MenusApplication extends Application {
         super.onCreate();
         CacheManager.getInstance().initCacheDir();
 
+        AVOSCloud.initialize(this,"i2kNDijaO3BNSlbNRz1oWQo0-gzGzoHsz","FcWzqaqDJzxvv9WHBTmVMdQ0");
+        AVOSCloud.useAVCloudCN();
 //        initImageLoader(getApplicationContext());
 
     }

@@ -5,8 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.SaveCallback;
 import com.mrliang.menus.R;
 import com.mrliang.menus.fragment.ClassifyFragment;
 import com.mrliang.menus.fragment.FindFragment;
@@ -39,6 +43,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        testObject();
 
         initView();
 
@@ -157,5 +162,20 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    private void testObject() {
+        AVObject object = new AVObject("TestObject");
+        object.put("words", "Hello world");
+        object.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(AVException e) {
+                if (e == null) {
+                    Log.e("testObject","success");
+                }else {
+                    Log.e("testObject","error");
+                }
+            }
+        });
     }
 }

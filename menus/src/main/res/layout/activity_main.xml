@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            app:tab_color="#EE3B3B"
+            app:tab_color="@color/color_red"
             app:tab_icon="@mipmap/ic_tab_menu"
             app:tab_text="@string/tab_str_menu"
             app:tab_text_size="@dimen/tab_str_size_12" />
@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            app:tab_color="#EE3B3B"
+            app:tab_color="@color/color_red"
             app:tab_icon="@mipmap/ic_tab_find"
             app:tab_text="@string/tab_str_find"
             app:tab_text_size="@dimen/tab_str_size_12" />
@@ -45,7 +45,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            app:tab_color="#EE3B3B"
+            app:tab_color="@color/color_red"
             app:tab_icon="@mipmap/ic_tab_classify"
             app:tab_text="@string/tab_str_classify"
             app:tab_text_size="@dimen/tab_str_size_12" />
@@ -56,7 +56,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            app:tab_color="#EE3B3B"
+            app:tab_color="@color/color_red"
             app:tab_icon="@mipmap/ic_tab_my"
             app:tab_text="@string/tab_str_my"
             app:tab_text_size="@dimen/tab_str_size_12" />

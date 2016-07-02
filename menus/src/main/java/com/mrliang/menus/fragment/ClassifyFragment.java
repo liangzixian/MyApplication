@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+
 import com.alibaba.fastjson.JSON;
 import com.mrliang.androidlib.net.RequestCallback;
 import com.mrliang.androidlib.net.RequestParameter;

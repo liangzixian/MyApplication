@@ -26,8 +26,8 @@ public class MyFragment extends Fragment{
         if (parent != null) {
             parent.removeView(mRootView);
         }
-        TextView textView = (TextView) mRootView.findViewById(R.id.id_tv_my);
-        textView.setText("MyFragment");
+//        TextView textView = (TextView) mRootView.findViewById(R.id.id_tv_my);
+//        textView.setText("MyFragment");
         return mRootView;
     }
 }
