@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -164,6 +166,23 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     }
 
+    private long firstTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            long secondTime = System.currentTimeMillis();
+            if (secondTime - firstTime > 2000) {
+                Toast.makeText(this,"再按一次退出程序",Toast.LENGTH_SHORT).show();
+                firstTime = secondTime;//更新firstTime
+                return true;
+            }else {
+                System.exit(0);
+            }
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     private void testObject() {
         AVObject object = new AVObject("TestObject");
         object.put("words", "Hello world");
@@ -171,9 +190,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             @Override
             public void done(AVException e) {
                 if (e == null) {
-                    Log.e("testObject","success");
-                }else {
-                    Log.e("testObject","error");
+                    Log.e("testObject", "success");
+                } else {
+                    Log.e("testObject", "error");
                 }
             }
         });

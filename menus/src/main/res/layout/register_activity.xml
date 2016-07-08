@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_bg_gray"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_register_back"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/str_register"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/str_size_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/str_login"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/str_size_16"
+            android:id="@+id/tv_register_login" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="40dp">
+
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/et_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/bg_et"
+            android:hint="@string/str_hint_phone"
+            android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="10dp"
+            android:paddingStart="60dp"
+            android:paddingTop="10dp" />
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/et_register_phone"
+            android:layout_alignLeft="@id/et_register_phone"
+            android:layout_alignStart="@id/et_register_phone"
+            android:layout_alignTop="@id/et_register_phone"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="6dp"
+            android:src="@mipmap/ic_menu_call" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="@string/str_hint_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_register_get_code"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/et_register_code" />
+
+        <Button
+            android:gravity="center"
+            android:textSize="@dimen/str_size_12"
+            android:textColor="@color/color_white"
+            android:background="@drawable/bg_btn_get_code"
+            android:text="@string/str_get_phone_code"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btn_register_get_code" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:textColor="@color/color_white"
+        android:background="@drawable/bg_btn_exit"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/str_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_register_reg" />
+
+</LinearLayout>
